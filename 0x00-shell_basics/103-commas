@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -1a | LC_COLLATE=C sort --field-separator=/ --key=2,2n --key=1,1
+find . -maxdepth 1 | sort -t/ -k2,2n -k1,1 | sed 's/$/,/' | tr -d '\n' && echo
