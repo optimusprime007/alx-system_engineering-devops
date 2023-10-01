@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -maxdepth 1 | sort -t/ -k2,2n -k1,1 | sed 's/$/,/' | tr -d '\n' && echo
+ls -avmp
